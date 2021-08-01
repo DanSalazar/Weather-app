@@ -6,7 +6,7 @@ export const palette = {
     white: '#ffffff',
     blue: '#0fbcf9',
     yellow: '#ffd32a',
-    bg: '#f1f2f6',
+    bg: '#fafafa',
 };
 
 const GlobalStyles = createGlobalStyle`
@@ -24,7 +24,8 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 1em 0;
-        background: ${palette.bg};
+        background: #fafafa; 
+        color: ${palette.black};
         font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
         Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 

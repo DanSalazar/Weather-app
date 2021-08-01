@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SearchIcon from '../../assets/Search';
 import { FieldContainer, Input } from './styles';
 
-const InputField = () => {
+const InputField = ({ cityName }) => {
     const [city, setCity] = useState('');
 
     const handleSubmit = (e) => {

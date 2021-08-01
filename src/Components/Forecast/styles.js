@@ -8,7 +8,7 @@ export const ForecastContainer = styled.div`
 
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(3, 1fr);
-        height: 120px;
+        height: 150px;
     }
 `;
 
@@ -31,10 +31,10 @@ export const ForecastBody = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 60%;
+    width: 40%;
 
     @media screen and (min-width: 1024px) {
-        width: 100%;
+        width: 80%;
     }
 `;
 

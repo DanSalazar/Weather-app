@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const WeatherWrapper = styled.div`
+export const WeatherContainer = styled.div`
     width: 100%;
     height: 150px;
     display: flex;

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const HeaderContainer = {};
+
 export const FieldContainer = styled.div`
     display: flex;
     align-items: center;

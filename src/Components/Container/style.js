@@ -8,7 +8,7 @@ export const AppContainer = styled.div`
     justify-content: space-between;
     flex-direction: column;
     margin: auto;
-    width: 80vw;
+    width: 80%;
     padding: 1.5em 1.25em;
 
     @media screen and (min-width: 1024px) {

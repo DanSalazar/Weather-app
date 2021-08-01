@@ -10,7 +10,7 @@ function DropletIcon(props) {
             fill="currentColor"
             className="prefix__bi prefix__bi-droplet"
             viewBox="0 0 16 16"
-            color={palette.blue}
+            color={palette.black}
             {...props}
         >
             <path
