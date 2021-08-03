@@ -21,7 +21,8 @@ const dictWeather = {
 };
 
 const Forecast = ({ forecastData }) => {
-    const [forecast, setForecast] = useState(forecastData.slice(5));
+    // Get the forecast of the next three days
+    const [forecast, setForecast] = useState(forecastData.slice(1, 4));
 
     return (
         <ForecastContainer>

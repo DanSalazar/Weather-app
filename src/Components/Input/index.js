@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import SearchIcon from '../../assets/Search';
-import { FieldContainer, Input } from './styles';
+import { FieldContainer, HeaderContainer, Input } from './styles';
 
-const InputField = ({ cityName }) => {
-    const [city, setCity] = useState('');
+const InputField = ({ cityName, setCity }) => {
+    const [value, setValue] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setCity(value);
     };
 
     const handleChange = (e) => {
-        setCity(e.target.value);
+        setValue(e.target.value);
     };
 
     return (
-        <form>
+        <HeaderContainer>
             <FieldContainer onSubmit={handleSubmit}>
-                <SearchIcon width={18} height={18}></SearchIcon>
-                <Input
-                    onChange={handleChange}
-                    type="text"
-                    placeholder="Type some city"
-                />
+                <button>
+                    <SearchIcon width={18} height={18} />
+                </button>
+                <Input onChange={handleChange} type="text" placeholder="City" />
             </FieldContainer>
-        </form>
+        </HeaderContainer>
     );
 };
 

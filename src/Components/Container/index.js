@@ -4,24 +4,40 @@ import Conditions from '../Conditions';
 import Forecast from '../Forecast';
 import InputField from '../Input';
 import Weather from '../Weather';
-import { AppContainer } from './style';
+import { AppContainer, AppContainerError } from './style';
 
 const arr = [1, 2, 3, 4];
 
 const Container = () => {
     const [currentWeather, setcurrentWeather] = useState(null);
+    const [city, setCity] = useState('London');
+    const [errors, setErrors] = useState(false);
+    const [load, setLoad] = useState(false);
 
     useEffect(() => {
-        weatherApi('Maturin').then((res) => setcurrentWeather(res));
-    }, []);
+        if (city)
+            weatherApi(city)
+                .then((res) => {
+                    setErrors(false);
+                    setcurrentWeather(res);
+                })
+                .catch((error) => {
+                    setErrors(true);
+                });
+    }, [city]);
 
     return (
         <>
-            {currentWeather === null ? (
-                <b></b>
+            {errors ? (
+                <AppContainerError>
+                    <InputField setCity={setCity} />
+                    <p> City not found </p>
+                </AppContainerError>
+            ) : currentWeather === null ? (
+                <></>
             ) : (
                 <AppContainer>
-                    <InputField />
+                    <InputField setCity={setCity} />
                     <Weather weatherData={currentWeather.current} />
                     <Conditions weatherData={currentWeather.current} />
                     <Forecast forecastData={currentWeather.daily} />

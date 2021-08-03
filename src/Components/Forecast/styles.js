@@ -1,10 +1,13 @@
 import styled from 'styled-components';
+import { fade } from '../../GlobalStyle';
 
 export const ForecastContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
     height: 400px;
+    padding: 0.75em 0;
+    animation: 0.5s ${fade} ease;
 
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(3, 1fr);
@@ -19,7 +22,6 @@ export const ForecastCard = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
-    border-top: 1px solid #f5f5f5;
 
     p {
         font-size: 0.875em;

@@ -3,19 +3,18 @@ import CloudDrizzle from '../../assets/CloudDrizzle';
 import DropletIcon from '../../assets/Droplet';
 import CloudsIcon from '../../assets/Clouds';
 import WindIcon from '../../assets/Wind';
-import { ConditionCard, ConditionsContainer } from './styles';
+import { ConditionCard, ConditionsContainer, WindText } from './styles';
 import { palette } from '../../GlobalStyle';
 
 const Conditions = ({ weatherData }) => {
-    console.log(weatherData);
-
     return (
         <ConditionsContainer>
             <ConditionCard>
                 <WindIcon width={24} height={24} />
-                <p>
-                    {weatherData.wind_speed.toFixed()} <span>k/h</span>
-                </p>
+                <WindText>
+                    <p>{weatherData.wind_speed.toFixed()}</p>
+                    <span>km/h</span>
+                </WindText>
             </ConditionCard>
             <ConditionCard>
                 <DropletIcon width={24} height={24} />

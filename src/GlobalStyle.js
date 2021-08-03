@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, keyframes } from 'styled-components';
 
 export const palette = {
     gray: '#57606f',
@@ -8,6 +8,16 @@ export const palette = {
     yellow: '#ffd32a',
     bg: '#fafafa',
 };
+
+export const fade = keyframes`
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+`;
 
 const GlobalStyles = createGlobalStyle`
 
@@ -19,12 +29,18 @@ const GlobalStyles = createGlobalStyle`
     h1,h2,h3,h4,h5,h6,p {
         margin: 0;
     }
+
+    input {
+        font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
+        Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
     
     body {
         box-sizing: border-box;
         margin: 0;
         padding: 1em 0;
-        background: #fafafa; 
+        width: 100%;
+        background: ${palette.bg}; 
         color: ${palette.black};
         font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
         Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
