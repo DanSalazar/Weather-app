@@ -1,12 +1,12 @@
 import { createGlobalStyle, keyframes } from 'styled-components';
 
 export const palette = {
-    gray: '#57606f',
+    gray: '#bdc3c7',
     black: '#2f3542',
     white: '#ffffff',
     blue: '#0fbcf9',
     yellow: '#ffd32a',
-    bg: '#fafafa',
+    bg: '#fbfbfb',
 };
 
 export const fade = keyframes`
@@ -20,6 +20,10 @@ export const fade = keyframes`
 `;
 
 const GlobalStyles = createGlobalStyle`
+
+    * {
+        box-sizing: border-box;
+    }
 
     a {
         text-decoration:  none;
@@ -36,9 +40,9 @@ const GlobalStyles = createGlobalStyle`
     }
     
     body {
-        box-sizing: border-box;
         margin: 0;
         padding: 1em 0;
+        font-size: 16px;
         width: 100%;
         background: ${palette.bg}; 
         color: ${palette.black};
@@ -53,6 +57,9 @@ const GlobalStyles = createGlobalStyle`
             align-items: center;
         }
 
+        @media screen and (min-width: 1920px){
+            font-size: 18px;
+        }
     }
 `;
 

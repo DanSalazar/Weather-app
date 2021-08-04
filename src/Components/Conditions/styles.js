@@ -17,16 +17,22 @@ export const ConditionCard = styled.div`
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-
-    p {
-        font-size: 1.5em;
-    }
 `;
 
 export const WindText = styled.div`
     display: flex;
 
+    p {
+        font-size: 1.5em;
+    }
+
     span {
         font-size: 0.75em;
+    }
+
+    @media screen and (max-width: 320px) {
+        p {
+            font-size: 0.875em;
+        }
     }
 `;

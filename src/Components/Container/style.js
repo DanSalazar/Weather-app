@@ -21,18 +21,18 @@ export const AppContainer = styled.div`
     justify-content: space-between;
     flex-direction: column;
     margin: auto;
-    padding: 1.25em 1.5em;
-    width: 75vw;
+    padding: 1.5em;
+    width: 90vw;q
     animation: 0.4s ${fade} ease;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 768px) {
         width: 650px;
         margin: 0;
     }
 `;
 
 export const AppContainerError = styled(AppContainer)`
-    height: 520px;
+    height: 550px;
     justify-content: flex-start;
 
     p {

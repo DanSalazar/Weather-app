@@ -1,7 +1,7 @@
 import React from 'react';
 import { palette } from '../GlobalStyle';
 
-function SnowIcon(props) {
+function SmokeIcon(props) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +18,4 @@ function SnowIcon(props) {
     );
 }
 
-export default SnowIcon;
+export default SmokeIcon;

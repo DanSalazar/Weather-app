@@ -22,6 +22,7 @@ const InputField = ({ cityName, setCity }) => {
                 </button>
                 <Input onChange={handleChange} type="text" placeholder="City" />
             </FieldContainer>
+            <p> {cityName} </p>
         </HeaderContainer>
     );
 };

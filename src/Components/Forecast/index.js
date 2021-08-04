@@ -3,6 +3,10 @@ import CloudDrizzle from '../../assets/CloudDrizzle';
 import SunIcon from '../../assets/Sun';
 import SnowIcon from '../../assets/Snow';
 import CloudsIcon from '../../assets/Clouds';
+import RainIcon from '../../assets/Rain';
+import LightningIcon from '../../assets/Lightning';
+import SmokeIcon from '../../assets/Smoke';
+import LightningRainIcon from '../../assets/LightningRain';
 import { formatDate } from '../../utils';
 import {
     ForecastBody,
@@ -10,14 +14,16 @@ import {
     ForecastContainer,
     TimeForecast,
 } from './styles';
-import RainIcon from '../../assets/Rain';
 
 const dictWeather = {
-    Clear: <SunIcon height={48} width={48} />,
-    Clouds: <CloudsIcon height={48} width={48} />,
-    Snow: <SnowIcon height={48} width={48} />,
-    Drizzle: <CloudDrizzle height={48} width={48} />,
-    Rain: <RainIcon height={48} width={48} />,
+    Clouds: <CloudsIcon height={44} width={44} />,
+    Snow: <SnowIcon height={44} width={44} />,
+    Drizzle: <CloudDrizzle height={44} width={44} />,
+    Rain: <RainIcon height={44} width={44} />,
+    Lightning: <LightningIcon height={44} width={44} />,
+    LightningRain: <LightningRainIcon height={44} width={44} />,
+    Clear: <SunIcon height={44} width={44} />,
+    Smoke: <SmokeIcon height={44} width={44} />,
 };
 
 const Forecast = ({ forecastData }) => {

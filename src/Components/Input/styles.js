@@ -2,21 +2,28 @@ import styled from 'styled-components';
 import { palette } from '../../GlobalStyle';
 
 export const HeaderContainer = styled.div`
-    width: 100%;
     display: flex;
     height: 40px;
+    justify-content: space-between;
     align-items: center;
 
     p {
         font-size: 0.75em;
-        font-weight: 400;
+        color: ${palette.gray};
+        font-weight: 300;
+    }
+
+    @media screen and (min-width: 768px) {
+        p {
+            font-size: 1em;
+        }
     }
 `;
 
 export const FieldContainer = styled.form`
     display: flex;
+    width: 120px;
     align-items: center;
-    padding: 0.25em 0.5em;
 
     button {
         background: none;
@@ -27,6 +34,10 @@ export const FieldContainer = styled.form`
 
     svg {
         transform: rotate(90deg);
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 200px;
     }
 `;
 

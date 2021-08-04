@@ -6,8 +6,6 @@ import InputField from '../Input';
 import Weather from '../Weather';
 import { AppContainer, AppContainerError } from './style';
 
-const arr = [1, 2, 3, 4];
-
 const Container = () => {
     const [currentWeather, setcurrentWeather] = useState(null);
     const [city, setCity] = useState('London');
@@ -37,7 +35,7 @@ const Container = () => {
                 <></>
             ) : (
                 <AppContainer>
-                    <InputField setCity={setCity} />
+                    <InputField setCity={setCity} cityName={city} />
                     <Weather weatherData={currentWeather.current} />
                     <Conditions weatherData={currentWeather.current} />
                     <Forecast forecastData={currentWeather.daily} />

@@ -18,11 +18,15 @@ const Conditions = ({ weatherData }) => {
             </ConditionCard>
             <ConditionCard>
                 <DropletIcon width={24} height={24} />
-                <p> {weatherData.humidity}% </p>
+                <WindText>
+                    <p> {weatherData.humidity}% </p>
+                </WindText>
             </ConditionCard>
             <ConditionCard>
                 <CloudsIcon width={24} height={24} color={palette.black} />
-                <p> {weatherData.clouds}% </p>
+                <WindText>
+                    <p> {weatherData.clouds}% </p>
+                </WindText>
             </ConditionCard>
         </ConditionsContainer>
     );

@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { fade } from '../../GlobalStyle';
+import { fade, palette } from '../../GlobalStyle';
 
 export const ForecastContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    height: 400px;
-    padding: 0.75em 0;
+    height: 300px;
     animation: 0.5s ${fade} ease;
 
     @media screen and (min-width: 768px) {
@@ -38,6 +37,10 @@ export const ForecastBody = styled.div`
     @media screen and (min-width: 1024px) {
         width: 80%;
     }
+
+    @media screen and (max-width: 320px) {
+        width: 70%;
+    }
 `;
 
 export const TimeForecast = styled.div`
@@ -54,5 +57,15 @@ export const TimeForecast = styled.div`
         font-size: 1em;
         font-weight: 300;
         color: #34495e;
+    }
+
+    @media screen and (max-width: 320px) {
+        p {
+            font-size: 1.25em;
+        }
+
+        span {
+            font-size: 0.875em;
+        }
     }
 `;

@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React from 'react';
+import { palette } from '../GlobalStyle';
 
 function CloudSun(props) {
     return (
@@ -9,6 +10,7 @@ function CloudSun(props) {
             fill="currentColor"
             className="prefix__bi prefix__bi-cloud-sun"
             viewBox="0 0 16 16"
+            color={palette.black}
             {...props}
         >
             <path d="M7 8a3.5 3.5 0 013.5 3.555.5.5 0 00.624.492A1.503 1.503 0 0113 13.5a1.5 1.5 0 01-1.5 1.5H3a2 2 0 11.1-3.998.5.5 0 00.51-.375A3.502 3.502 0 017 8zm4.473 3a4.5 4.5 0 00-8.72-.99A3 3 0 003 16h8.5a2.5 2.5 0 000-5h-.027z" />

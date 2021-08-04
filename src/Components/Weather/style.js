@@ -7,7 +7,7 @@ export const WeatherContainer = styled.div`
     display: flex;
     align-items: center;
     animation: 0.5s ${fade} ease;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     @media screen and (min-width: 1024px) {
         display: grid;
@@ -21,6 +21,7 @@ export const IconContainer = styled.div`
 
 export const Time = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: column;
     grid-column: 4/5;
 
@@ -35,9 +36,15 @@ export const Time = styled.div`
         color: #34495e;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (max-width: 320px) {
         p {
-            font-size: 5em;
+            font-size: 2.25em;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        p {
+            font-size: 4.5em;
         }
 
         span {
