@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { fade, palette } from '../../GlobalStyle'
+import { fade } from '../../GlobalStyle'
 
 export const ForecastContainer = styled.div`
   display: grid;

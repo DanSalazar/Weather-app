@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import CloudDrizzle from '../../assets/CloudDrizzle'
 import SunIcon from '../../assets/Sun'
 import SnowIcon from '../../assets/Snow'

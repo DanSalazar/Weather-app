@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import weatherApi from '../../services/api'
 import Conditions from '../Conditions'
 import Forecast from '../Forecast'
@@ -10,7 +10,6 @@ const Container = () => {
   const [currentWeather, setcurrentWeather] = useState(null)
   const [city, setCity] = useState('London')
   const [errors, setErrors] = useState(false)
-  const [load, setLoad] = useState(false)
 
   useEffect(() => {
     if (city)

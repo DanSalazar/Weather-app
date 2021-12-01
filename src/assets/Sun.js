@@ -8,7 +8,6 @@ const SunIcon = (props) => {
       width={16}
       height={16}
       fill='currentColor'
-      color='#fed330'
       className='prefix__bi prefix__bi-brightness-high'
       viewBox='0 0 16 16'
       color={palette.yellow}

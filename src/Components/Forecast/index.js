@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import CloudDrizzle from '../../assets/CloudDrizzle'
 import SunIcon from '../../assets/Sun'
 import SnowIcon from '../../assets/Snow'
@@ -27,8 +27,11 @@ const dictWeather = {
 }
 
 const Forecast = ({ forecastData }) => {
-  // Get the forecast of the next three days
-  const [forecast, setForecast] = useState(forecastData.slice(1, 4))
+  const [forecast, setForecast] = useState([])
+  
+  useEffect(() => {
+    setForecast(forecastData.slice(1, 4))
+  }, [forecastData])
 
   return (
     <ForecastContainer>

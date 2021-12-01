@@ -1,5 +1,3 @@
-import React from 'react'
-import CloudDrizzle from '../../assets/CloudDrizzle'
 import DropletIcon from '../../assets/Droplet'
 import CloudsIcon from '../../assets/Clouds'
 import WindIcon from '../../assets/Wind'
