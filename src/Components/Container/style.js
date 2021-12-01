@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-import { fade, palette } from '../../GlobalStyle';
+import styled, { keyframes } from 'styled-components'
+import { fade, palette } from '../../GlobalStyle'
 
 const effect = keyframes`
     0% {
@@ -11,7 +11,7 @@ const effect = keyframes`
         opacity: 1;
         left: 0;
     }
-`;
+`
 
 export const AppContainer = styled.div`
     border-radius: 8px;
@@ -29,15 +29,15 @@ export const AppContainer = styled.div`
         width: 650px;
         margin: 0;
     }
-`;
+`
 
 export const AppContainerError = styled(AppContainer)`
-    height: 550px;
-    justify-content: flex-start;
+  height: 550px;
+  justify-content: flex-start;
 
-    p {
-        font-size: 1.5em;
-        text-align: center;
-        margin: 4em 0;
-    }
-`;
+  p {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 4em 0;
+  }
+`
